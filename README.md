@@ -1,6 +1,6 @@
 # Notes on single-cell Hi-C technologies, tools, and data
 
-Related repositories: https://github.com/mdozmorov/HiC_tools, https://github.com/mdozmorov/HiC_data. Issues and/or Pull requests to add other data are welcome!
+For a comprehensive overview of the subject, consider [other bioinformatics resources](https://github.com/mdozmorov/Bioinformatics_notes) and [collections of links to various resources](https://github.com/mdozmorov/MDmisc_notes). Issues with suggestions and pull requests are welcome!
 
 # Table of content
 
