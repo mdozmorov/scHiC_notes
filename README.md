@@ -7,7 +7,14 @@ For a comprehensive overview of the subject, consider [other bioinformatics reso
 * [Tools](#tools)
 * [Papers and data](#papers-and-data)
 
+- Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005. - Assessment of Hi-C methods applied to single-cell Hi-C data. Overview of computational analysis of Hi-C data (normalization, A/B compartment, TAD, loop calling, differential analysis), scRNA-seq data properties. Tested on systematically downsampled data and on experimental scHi-C data. HiCnorm is most performing for normalization, Insulation Score fastHiC for TAD/loop calling. A/B compartments are poorly defined in scHi-C data, TADs can be identified at single-cell level, aggregation improves TAD detection. Adjusted mutual information and weight similarity for TAD similarity assessment. Other methods, like TAD boundary prediction from epigenomic features.
+    - [Table 1 - Methods for TAD identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005)
+    - [Table 2 - Methods for chromatin loop identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005).
+
+
 ## Tools
+
+- `scHiCExplorer` - Single cell Hi-C data analysis toolbox, Python, from processing to normalization, clustering, compartment identification, visualization. https://github.com/joachimwolff/scHiCExplorer
 
 - `hickit` - TAD calling, phase imputation, 3D modeling and more for diploid single-cell Hi-C (Dip-C) and general Hi-C. https://github.com/lh3/hickit
 
