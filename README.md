@@ -5,6 +5,7 @@ For a comprehensive overview of the subject, consider [other bioinformatics reso
 # Table of content
 
 * [Tools](#tools)
+  * [Clustering](#clustering)
 * [Papers and data](#papers-and-data)
 
 - Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005. - Assessment of Hi-C methods applied to single-cell Hi-C data. Overview of computational analysis of Hi-C data (normalization, A/B compartment, TAD, loop calling, differential analysis), scRNA-seq data properties. Tested on systematically downsampled data and on experimental scHi-C data. HiCnorm is most performing for normalization, Insulation Score fastHiC for TAD/loop calling. A/B compartments are poorly defined in scHi-C data, TADs can be identified at single-cell level, aggregation improves TAD detection. Adjusted mutual information and weight similarity for TAD similarity assessment. Other methods, like TAD boundary prediction from epigenomic features.
@@ -25,6 +26,12 @@ For a comprehensive overview of the subject, consider [other bioinformatics reso
 
 - `nuc_processing` - Chromatin contact paired-read single-cell Hi-C processing module for Nuc3D and NucTools. https://github.com/TheLaueLab/nuc_processing.
     - Stevens, Tim J., David Lando, Srinjan Basu, Liam P. Atkinson, Yang Cao, Steven F. Lee, Martin Leeb, et al. “3D Structures of Individual Mammalian Genomes Studied by Single-Cell Hi-C.” Nature, March 13, 2017. https://doi.org/10.1038/nature21429.
+
+### Clustering
+
+- [scHiCTools](https://github.com/liu-bioinfo-lab/scHiCTools) - clustering of scHi-C data. Project single cells in a lower-dimensional Euclidean space. Three methods for smoothing scHi-C data (linear convolution, random walk, network enhancing), three projection methods (fastHiCRep, Selfish, InnerProduct), three embedding methods if assuming cells come from a continuous manifold (MDS, t-SNE, PHATE), or three clustering methods if assuming cells are from different clusters (k-means, spectral clustering, HiCluster). Brief Methods of each approach. Tested on Nagano 2017 cell-cycle dataset. Inner product captures cell similarity well, any embedding works good, linear convolution and random walk improve projections at high dropout rates. Input - text matrices. Python 3 https://github.com/liu-bioinfo-lab/scHiCTools
+    - Li, Xinjun, Fan Feng, Wai Yan Leung, and Jie Liu. “[ScHiCTools: A Computational Toolbox for Analyzing Single-Cell Hi-C Data](https://doi.org/10.1101/769513).” Preprint. Bioinformatics, September 18, 2019. 
+
 
 ## Papers and data
 
