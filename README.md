@@ -1,17 +1,18 @@
 # Notes on single-cell Hi-C technologies, tools, and data
 
-For a comprehensive overview of the subject, consider [other bioinformatics resources](https://github.com/mdozmorov/Bioinformatics_notes) and [collections of links to various resources](https://github.com/mdozmorov/MDmisc_notes). Issues with suggestions and pull requests are welcome!
+Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTING.md)! See [MDmisc notes](https://github.com/mdozmorov/MDmisc_notes) for other programming and genomics-related notes.
 
 # Table of content
 
-* [Tools](#tools)
-  * [Clustering](#clustering)
-* [Papers and data](#papers-and-data)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005. - Assessment of Hi-C methods applied to single-cell Hi-C data. Overview of computational analysis of Hi-C data (normalization, A/B compartment, TAD, loop calling, differential analysis), scRNA-seq data properties. Tested on systematically downsampled data and on experimental scHi-C data. HiCnorm is most performing for normalization, Insulation Score fastHiC for TAD/loop calling. A/B compartments are poorly defined in scHi-C data, TADs can be identified at single-cell level, aggregation improves TAD detection. Adjusted mutual information and weight similarity for TAD similarity assessment. Other methods, like TAD boundary prediction from epigenomic features.
-    - [Table 1 - Methods for TAD identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005)
-    - [Table 2 - Methods for chromatin loop identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005).
 
+- [Tools](#tools)
+  - [Clustering](#clustering)
+- [Papers and data](#papers-and-data)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Tools
 
@@ -34,6 +35,10 @@ For a comprehensive overview of the subject, consider [other bioinformatics reso
 
 
 ## Papers and data
+
+- Li, Xiao, Ziyang An, and Zhihua Zhang. “Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level.” Methods, August 2019, S1046202319300891. https://doi.org/10.1016/j.ymeth.2019.08.005. - Assessment of Hi-C methods applied to single-cell Hi-C data. Overview of computational analysis of Hi-C data (normalization, A/B compartment, TAD, loop calling, differential analysis), scRNA-seq data properties. Tested on systematically downsampled data and on experimental scHi-C data. HiCnorm is most performing for normalization, Insulation Score fastHiC for TAD/loop calling. A/B compartments are poorly defined in scHi-C data, TADs can be identified at single-cell level, aggregation improves TAD detection. Adjusted mutual information and weight similarity for TAD similarity assessment. Other methods, like TAD boundary prediction from epigenomic features.
+    - [Table 1 - Methods for TAD identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005)
+    - [Table 2 - Methods for chromatin loop identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005).
 
 - Arrastia, Mary V., Joanna W. Jachowicz, Noah Ollikainen, Matthew S. Curtis, Charlotte Lai, Sofia Quinodoz, David A. Selck, Mitchell Guttman, and Rustem F. Ismagilov. “[A Single-Cell Method to Map Higher-Order 3D Genome Organization in Thousands of Individual Cells Reveals Structural Heterogeneity in Mouse ES Cells](https://doi.org/10.1101/2020.08.11.242081).” Preprint. Molecular Biology, August 12, 2020. - **scSPRITE** - Single-cell split-pool recognition of interactions by tag extension.Two triple-sets of split-pool barcoding, nuclear and spatial, DNA phosphate modified (DMP), odd, and even tagging. Paired-end sequencing, read 1 has genomic DNA and the DMP tag, read 2 has other 5 tags. Detects chromatin structures at all scales. Applied to >1000 mESC nuclei. Highly correlate with bulk SPRITE data. Captures multi-way interactions. Captures >30-fold more contacts than scHi-C with <10-fold reads. Processed single-cell matrices, ensemble, https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154353. A Snakemake workflow for data processing, https://github.com/caltech-bioinformatics-resource-center/Guttman_Ismagilov_Labs
 
