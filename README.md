@@ -24,9 +24,6 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - `dip-c` - Tools to analyze Dip-C (or other 3C/Hi-C) data - https://github.com/tanlongzhi/dip-c
 
-- `HiCluster` - scHi-C clustering based on imputation using linear convolution and random walk. scHi-C challenges. Outperforms PCA, HiCrep. TAD-like structures can be detected in imputed data. Simulations, introducing noise, sparsity. https://github.com/zhoujt1994/scHiCluster
-    - Zhou, Jingtian, Jianzhu Ma, Yusi Chen, Chuankai Cheng, Bokan Bao, Jian Peng, Terrence Sejnowski, Jesse Dixon, and Joseph Ecker. “HiCluster: A Robust Single-Cell Hi-C Clustering Method Based on Convolution and Random Walk.” Preprint. Bioinformatics, December 27, 2018. https://doi.org/10.1101/506717.
-
 - `nuc_processing` - Chromatin contact paired-read single-cell Hi-C processing module for Nuc3D and NucTools. https://github.com/TheLaueLab/nuc_processing.
     - Stevens, Tim J., David Lando, Srinjan Basu, Liam P. Atkinson, Yang Cao, Steven F. Lee, Martin Leeb, et al. “3D Structures of Individual Mammalian Genomes Studied by Single-Cell Hi-C.” Nature, March 13, 2017. https://doi.org/10.1038/nature21429.
 
@@ -34,6 +31,9 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - [scHiCTools](https://github.com/liu-bioinfo-lab/scHiCTools) - clustering of scHi-C data. Project single cells in a lower-dimensional Euclidean space. Three methods for smoothing scHi-C data (linear convolution, random walk, network enhancing), three projection methods (fastHiCRep, Selfish, InnerProduct), three embedding methods if assuming cells come from a continuous manifold (MDS, t-SNE, PHATE), or three clustering methods if assuming cells are from different clusters (k-means, spectral clustering, HiCluster). Brief Methods of each approach. Tested on Nagano 2017 cell-cycle dataset. Inner product captures cell similarity well, any embedding works good, linear convolution and random walk improve projections at high dropout rates. Input - text matrices. Python 3 https://github.com/liu-bioinfo-lab/scHiCTools
     - Li, Xinjun, Fan Feng, Wai Yan Leung, and Jie Liu. “[ScHiCTools: A Computational Toolbox for Analyzing Single-Cell Hi-C Data](https://doi.org/10.1101/769513).” Preprint. Bioinformatics, September 18, 2019. 
+
+- [HiCluster](https://github.com/zhoujt1994/scHiCluster) - scHi-C clustering based on imputation using linear convolution and random walk. scHi-C challenges. Outperforms PCA, HiCrep. TAD-like structures can be detected in imputed data. Simulations, introducing noise, sparsity. Python
+    - Zhou, Jingtian, Jianzhu Ma, Yusi Chen, Chuankai Cheng, Bokan Bao, Jian Peng, Terrence Sejnowski, Jesse Dixon, and Joseph Ecker. “[HiCluster: A Robust Single-Cell Hi-C Clustering Method Based on Convolution and Random Walk](https://doi.org/10.1101/506717).” Preprint. Bioinformatics, December 27, 2018.
 
 
 ## Papers and data
