@@ -21,6 +21,9 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 ## Tools
 
+- [SnapHiC](https://github.com/HuMingLab/SnapHiC) - scHi-C analysis pipeline. Identifies chromatin loops at 10kb resolution. Imputes contact probability with the random walk with restart algorithm (considering the effective fragment size, GC content, mappability, details in Methods), distance-normalizes, applies the paired t-test using all cells to identify loop candidates, groups the loop candidates using the Rodriguez and Lailo's algorithm, and identifies summits within each cluster. Considers global and local background to filter out false positives. Tested on 742 mouse embryonic stem cells, sn-methyl-3C-seq data from 2,869  human prefrontal cortical cells. Compared with HiCCUPS, discovers 4-70 times more cell-type-specific loops, achieves better F1, peaks on APA analysis, CTCF convergence. Linking putative target genes for non-coding sequence variants associated with neuropsychiatric disorders.
+    - Yu, Miao, Armen Abnousi, Yanxiao Zhang, Guoqiang Li, Lindsay Lee, Ziyin Chen, Rongxin Fang et al. "[SnapHiC: a computational pipeline to map chromatin contacts from single cell Hi-C data](https://doi.org/10.1101/2020.12.13.422543)." bioRxiv, December 15, 2020
+
 - [scHiCExplorer](https://github.com/joachimwolff/scHiCExplorer) - Single cell Hi-C data analysis toolbox, Python, from processing to normalization, clustering, compartment identification, visualization.
 
 - [lh3/hickit](https://github.com/lh3/hickit) - TAD calling, phase imputation, 3D modeling and more for diploid single-cell Hi-C (Dip-C) and general Hi-C. See [https://doi.org/10.1016/j.cell.2020.12.032](https://doi.org/10.1016/j.cell.2020.12.032)
