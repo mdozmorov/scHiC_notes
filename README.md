@@ -51,6 +51,9 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 ## Papers
 
+- Zhou, Tianming, Ruochi Zhang, and Jian Ma. "[The 3D Genome Structure of Single Cells](https://doi.org/10.1146/annurev-biodatasci-020121-084709)." Annual Review of Biomedical Data Science 4 (2021).
+    - scHi-C technology and data review. Proximity ligation-based and ligation-free technologies, imaging-based, multi-omics single-cell technologies. Table 1 - single-cell 3D genome datasets. Computational methods, from preprocessing, storage dimensionality reduction, to imputation using linear convolution, random walk with restart, hypergraph-based methods, detection of AB compartments and TADs. Description of some tools, like scHiCluster, Higashi, MATCHA.
+
 - Li, Xiao, Ziyang An, and Zhihua Zhang. “[Comparison of Computational Methods for 3D Genome Analysis at Single-Cell Hi-C Level](https://doi.org/10.1016/j.ymeth.2019.08.005).” Methods, August 2019 - Assessment of Hi-C methods applied to single-cell Hi-C data. Overview of computational analysis of Hi-C data (normalization, A/B compartment, TAD, loop calling, differential analysis), scRNA-seq data properties. Tested on systematically downsampled data and on experimental scHi-C data. HiCnorm is most performing for normalization, Insulation Score fastHiC for TAD/loop calling. A/B compartments are poorly defined in scHi-C data, TADs can be identified at single-cell level, aggregation improves TAD detection. Adjusted mutual information and weight similarity for TAD similarity assessment. Other methods, like TAD boundary prediction from epigenomic features.
     - [Table 1 - Methods for TAD identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005)
     - [Table 2 - Methods for chromatin loop identification](https://www.sciencedirect.com/science/article/pii/S1046202319300891?via%3Dihub#t0005).
