@@ -57,6 +57,9 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 ## Papers
 
+- Galitsyna, Aleksandra A, and Mikhail S Gelfand. “[Single-Cell Hi-C Data Analysis: Safety in Numbers](https://doi.org/10.1093/bib/bbab316).” Briefings in Bioinformatics, August 18, 2021
+    - Single-cell Hi-C review, technology overview, analysis steps, challenges, tools. Mapping (split-read alignment, iterative mapping, read clipping, ORBITA), filtering spurious contacts, cells. Analysis, from 3D structure reconstruction, imputation, embedding, to clustering, pseudobulk analysis and AB compartments/TADs calling, deconvolution.
+
 - Zhou, Tianming, Ruochi Zhang, and Jian Ma. "[The 3D Genome Structure of Single Cells](https://doi.org/10.1146/annurev-biodatasci-020121-084709)." Annual Review of Biomedical Data Science 4 (2021).
     - scHi-C technology and data review. Proximity ligation-based and ligation-free technologies, imaging-based, multi-omics single-cell technologies. Table 1 - single-cell 3D genome datasets. Computational methods, from preprocessing, storage dimensionality reduction, to imputation using linear convolution, random walk with restart, hypergraph-based methods, detection of AB compartments and TADs. Description of some tools, like scHiCluster, Higashi, MATCHA.
 
