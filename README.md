@@ -77,6 +77,9 @@ Zhou, Tianming, Ruochi Zhang, and Jian Ma. “[The 3D Genome Structure of Single
 
 ### Technologies, data
 
+- [scSPRITE](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154353) - single-cell split-pool recognition of interactions by tag extension technology. Multi-way interactions. Applied to mESCs and detected chromosome territories, A/B compartments, TADs (heterogeneous), long-range interactions organized around various nuclear bodies. [GEO GSE154353](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154353) - processed matrices. [GitHub](https://github.com/caltech-bioinformatics-resource-center/Guttman_Ismagilov_Labs) - Code 
+    - Arrastia, Mary V., Joanna W. Jachowicz, Noah Ollikainen, Matthew S. Curtis, Charlotte Lai, Sofia A. Quinodoz, David A. Selck, Rustem F. Ismagilov, and Mitchell Guttman. "[Single-cell measurement of higher-order 3D genome organization with scSPRITE](https://doi.org/10.1038/s41587-021-00998-1)." Nature Biotechnology (2021): 1-10.
+
 - Single-nucleus Hi-C data (scHi-C) of 88 Drosophila BG3 cells. 2-5M paired-end reads per cell, 10kb resolution. ORBITA pipeline to eliminate the effect of Phi29 DNA polymerase template switching. Chromatin compartments approx. 1Mb in size, non-hierarchical conserved TADs can be detected. Lots of biology, integration with other omics data. Raw and processed data in .cool format at [GEO GSE131811](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131811)
     - Ulianov, Sergey V., Vlada V. Zakharova, Aleksandra A. Galitsyna, Pavel I. Kos, Kirill E. Polovnikov, Ilya M. Flyamer, Elena A. Mikhaleva, et al. “[Order and Stochasticity in the Folding of Individual Drosophila Genomes](https://doi.org/10.1038/s41467-020-20292-z).” Nature Communications 12, no. 1 (December 2021)
 
