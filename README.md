@@ -13,6 +13,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 - [Tools](#tools)
   - [Normalization](#normalization)
   - [Clustering](#clustering)
+  - [3D modeling](#3d-modeling)
 - [Papers](#papers)
   - [Clustering, embedding](#clustering-embedding)
   - [Technologies, data](#technologies-data)
@@ -55,6 +56,8 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - [scHiCluster](https://github.com/zhoujt1994/scHiCluster) - single-cell Hi-C clustering algorithm based on imputation using linear convolution (neighborhood smoothing within a window of size 1 over 1Mb scHi-C matrices) and random walk with restarts. scHi-C challenges: variability, sparsity, coverage heterogeneity. Two-step imputation to resolve sparsity, top-ranked interactions after imputation to resolve heterogeneity. Tested on simulated (from bulk Hi-C controlling for sparsity, and pseudobulk) and experimental (Ramani, four human cell lines; Flyamer, mouse zygotes and oocytes; Nagano) scHi-C data. Against PCA, HiCRep+MDS, the eigenvector method, the decay profile method. Adjusted Rand Index to test clustering quality. TAD-like structures can be detected in imputed data (TopDom). At least 5k contacts per cell is sufficient. Python package. Input - sparse matrices, 1Mb resolution, or juicer-pre format for custom resolution.
     - Zhou, Jingtian, Jianzhu Ma, Yusi Chen, Chuankai Cheng, Bokan Bao, Jian Peng, Terrence J. Sejnowski, Jesse R. Dixon, and Joseph R. Ecker. “[Robust Single-Cell Hi-C Clustering by Convolution- and Random-Walk–Based Imputation](https://doi.org/10.1073/pnas.1901423116).” Proceedings of the National Academy of Sciences, (July 9, 2019)
+
+### 3D modeling
 
 ## Papers
 
