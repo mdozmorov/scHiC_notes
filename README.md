@@ -1,6 +1,6 @@
 # Notes on single-cell Hi-C technologies, tools, and data
 
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)] 
+![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)]
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
 
 Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTING.md)! See [MDmisc notes](https://github.com/mdozmorov/MDmisc_notes) for other programming and genomics-related notes.
