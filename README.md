@@ -1,6 +1,7 @@
 # Notes on single-cell Hi-C technologies, tools, and data
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)] 
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
 
 Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTING.md)! See [MDmisc notes](https://github.com/mdozmorov/MDmisc_notes) for other programming and genomics-related notes.
 
@@ -24,8 +25,12 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 ## Tools
 
-- [SnapHiC](https://github.com/HuMingLab/SnapHiC) - scHi-C analysis pipeline. Identifies chromatin loops at 10kb resolution. Imputes contact probability with the random walk with restart algorithm (considering the effective fragment size, GC content, mappability, details in Methods), distance-normalizes, applies the paired t-test using all cells to identify loop candidates, groups the loop candidates using the Rodriguez and Lailo's algorithm, and identifies summits within each cluster. Considers global and local background to filter out false positives. Tested on 742 mouse embryonic stem cells, sn-methyl-3C-seq data from 2,869  human prefrontal cortical cells. Compared with HiCCUPS, discovers 4-70 times more cell-type-specific loops, achieves better F1, peaks on APA analysis, CTCF convergence. Linking putative target genes for non-coding sequence variants associated with neuropsychiatric disorders.
-    - Yu, Miao, Armen Abnousi, Yanxiao Zhang, Guoqiang Li, Lindsay Lee, Ziyin Chen, Rongxin Fang et al. "[SnapHiC: a computational pipeline to map chromatin contacts from single cell Hi-C data](https://doi.org/10.1101/2020.12.13.422543)." bioRxiv, December 15, 2020
+- [SnapHiC](https://github.com/HuMingLab/SnapHiC) - scHi-C analysis pipeline. Identifies chromatin loops at 10kb resolution. Imputes contact probability with the random walk with restart algorithm (scHiCluster method, considering the effective fragment size, GC content, mappability, details in Methods), distance-normalizes, applies the paired t-test using global and local background to identify loop candidates, groups the loop candidates using the Rodriguez and Lailo's algorithm, and identifies summits within each cluster. Considers global and local background to filter out false positives. Tested on 742 mouse embryonic stem cells, sn-methyl-3C-seq data from 2,869 human prefrontal cortical cells. Compared with HiCCUPS, discovers 4-70 times more cell-type-specific loops, achieves better F1, peak enrichment in APA analysis, CTCF convergent orientation, also detects known long-range interactions. Linking putative target genes and non-coding sequence variants associated with neuropsychiatric disorders. Ground truth for benchmarking: HiCCUPS loops plus long-range interadtions from PLAC-seq and HiChIP experiments from mESCs (MAPS pipeline). Compared with Hi-C-FastHiC, FitHiC2, HiC-ACT, on downsampled data. <details>
+    <summary>Paper</summary>
+    Yu, Miao, Armen Abnousi, Yanxiao Zhang, Guoqiang Li, Lindsay Lee, Ziyin Chen, Rongxin Fang, et al. “SnapHiC: A Computational Pipeline to Identify Chromatin Loops from Single-Cell Hi-C Data.” Nature Methods, August 26, 2021. https://doi.org/10.1038/s41592-021-01231-2.
+
+    Li, Xiaoqi, Lindsay Lee, Armen Abnousi, Miao Yu, Weifang Liu, Le Huang, Yun Li, and Ming Hu. “SnapHiC2: A Computationally Efficient Loop Caller for Single Cell Hi-C Data.” Computational and Structural Biotechnology Journal 20 (2022): 2778–83. https://doi.org/10.1016/j.csbj.2022.05.046. - SnapHiC2, fast reimplementation using a sliding window approach for random walk with restart. Enables data processing at 5kb resolution.
+</details>
 
 - [scHiCExplorer](https://github.com/joachimwolff/scHiCExplorer) - Single cell Hi-C data analysis toolbox, Python, from processing to normalization, clustering, compartment identification, visualization.
 
