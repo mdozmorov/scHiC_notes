@@ -74,6 +74,13 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
     Li, Angsheng, Guangjie Zeng, Haoyu Wang, Xiao Li, and Zhihua Zhang. “DeDoc2 Identifies and Characterizes the Hierarchy and Dynamics of Chromatin TAD-Like Domains in the Single Cells.” Advanced Science (Weinheim, Baden-Wurttemberg, Germany) 10, no. 20 (July 2023): e2300366. https://doi.org/10.1002/advs.202300366.
 </details>
 
+### Loop calling
+
+- [scGSLoop](https://github.com/fzbio/scGSLoop) - lightweight deep learning for fast and efficient loop detection at the single-cell level. Directly operates on the sparse scHi-C contact maps, with no need for imputation. Uses training-time proximity-aware negative sampling to improve the model's learning ability on the loop calling task. Applied to Nagano 2017 data and Lee 2019 data under a cross-species setting (trained on species A and tested on species B). Loop calls have potential functional implications. Compared with SnapHiC. <details>
+  <summary>Paper</summary>
+  Wang, Fuzhou, Hamid Alinejad-Rokny, Jiecong Lin, Tingxiao Gao, Xingjian Chen, Zetian Zheng, Lingkuan Meng, Xiangtao Li, and Ka-Chun Wong. “A Lightweight Framework For Chromatin Loop Detection at the Single-Cell Level.” Advanced Science, (October 2023). https://doi.org/10.1002/advs.202303502.
+</details>
+
 ### 3D modeling
 
 - [DPDchrom](https://github.com/polly-code/DPDchrom) - reconstruction of the 3D chromatin conformation from single-cell Hi-C data. Relies on dissipative particle dynamics (DPD). Incorporates expectation whether the conformation should be coil-like or globular (at the resolution of 10kb and lower). Explicitly accounts for solvent. Compared with the Stevens method, classical molecular dynamics (CMD) method. Benchmarked on artificial polymer models, DPDchrom performs better at low contact density (up to 95% accuracy). On experimental data - up to 65% accuracy. Propose the Modified Jaccard Index (Methds) to compare 3D structures irrespectively of spatial orientation and scale. Many practical aspects and parameters affecting reconstruction accuracy, data sparsity exponentially affects accuracy. [S2 Table](https://doi.org/10.1371/journal.pcbi.1009546.s010) - list of single nucleus Hi-C datasets, [S1 Appendix](https://doi.org/10.1371/journal.pcbi.1009546.s011) - Details of simulation methods and analysis, ORBITA protocol for snHi-C. [Tweet by Pavel Kos](https://twitter.com/PavelKos7/status/1461639123505135617?s=20)
