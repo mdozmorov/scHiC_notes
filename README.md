@@ -77,8 +77,8 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 ### Loop calling
 
 - [scGSLoop](https://github.com/fzbio/scGSLoop) - lightweight deep learning for fast and efficient loop detection at the single-cell level. Directly operates on the sparse scHi-C contact maps, with no need for imputation. Uses training-time proximity-aware negative sampling to improve the model's learning ability on the loop calling task. Applied to Nagano 2017 data and Lee 2019 data under a cross-species setting (trained on species A and tested on species B). Loop calls have potential functional implications. Compared with SnapHiC. <details>
-  <summary>Paper</summary>
-  Wang, Fuzhou, Hamid Alinejad-Rokny, Jiecong Lin, Tingxiao Gao, Xingjian Chen, Zetian Zheng, Lingkuan Meng, Xiangtao Li, and Ka-Chun Wong. “A Lightweight Framework For Chromatin Loop Detection at the Single-Cell Level.” Advanced Science, (October 2023). https://doi.org/10.1002/advs.202303502.
+    <summary>Paper</summary>
+    Wang, Fuzhou, Hamid Alinejad-Rokny, Jiecong Lin, Tingxiao Gao, Xingjian Chen, Zetian Zheng, Lingkuan Meng, Xiangtao Li, and Ka-Chun Wong. “A Lightweight Framework For Chromatin Loop Detection at the Single-Cell Level.” Advanced Science, (October 2023). https://doi.org/10.1002/advs.202303502.
 </details>
 
 ### 3D modeling
