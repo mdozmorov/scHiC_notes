@@ -40,7 +40,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - [nuc_processing](https://github.com/TheLaueLab/nuc_processing) - Chromatin contact paired-read single-cell Hi-C processing module for Nuc3D and NucTools. See [https://doi.org/10.1038/nature21429](https://doi.org/10.1038/nature21429)
 
-## Normalization
+### Normalization
 
 - [scHiCNorm](http://dna.cs.miami.edu/scHiCNorm/) - scHi-C normalization using regression against known biases (cutting site density, mappability, CG) using six distributions. Filter out cells with less than 50,000 uniquely mapped reads, merge cells, 1Mb resolution. Ramani 2017 data, 74 matrices. Correlations are assumed to be driven by biases, and decrease in between-dataset correlation and increase in variability is judged as good. 
     - Liu, Tong, and Zheng Wang. “[ScHiCNorm: A Software Package to Eliminate Systematic Biases in Single-Cell Hi-C Data](https://doi.org/10.1093/bioinformatics/btx747).” Bioinformatics, (March 15, 2018)
