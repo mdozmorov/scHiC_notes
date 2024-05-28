@@ -15,6 +15,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
   - [Clustering](#clustering)
   - [3D modeling](#3d-modeling)
   - [Simulation](#simulation)
+  - [TAD detection](#tad-detection)
 - [Papers](#papers)
   - [Clustering, embedding](#clustering-embedding)
   - [Technologies, data](#technologies-data)
@@ -85,6 +86,14 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
     <summary>Paper</summary>
     Fan, Shichen, Dachang Dang, Yusen Ye, Shao-Wu Zhang, Lin Gao, and Shihua Zhang. “scHi-CSim: A Flexible Simulator That Generates High-Fidelity Single-Cell Hi-C Data for Benchmarking.” Edited by Luonan Chen. Journal of Molecular Cell Biology 15, no. 1 (June 1, 2023): mjad003. https://doi.org/10.1093/jmcb/mjad003.
 </details>
+
+### TAD detection
+
+- [scKTLD](https://github.com/lhqxinghun/scKTLD) - TAD-like domain identification on single-cell Hi-C data using graph analysis. Hi-C contact matrix as the adjacency matrix, embeds the graph into a low-dimensional space using a kernel-based changepoint detection, optimized with Pruned Exact Linear Time (PELT). Four types of TAD detection methods, review of single-cell-specific. Experimental bulk (GM12878, K562, downsampled), single-cell Hi-C data, simulated data. ChIP-seq data (CTCF, Rad21, Smc3, H3K4me3) to justify biological relevance. Methods, math. Two hyperparameters, the dimension of the embeddings (128 deemed optimal), the penalty constant in changepoint detection. Normalization (KR or ICE) decreases performance. Compared with 7 TAD callers, including single-cell-specific deTOKI, scHiCluster, and Higashi. Comparison of TAD sets - adjusted mutual information, measure of concordance, TAD-adjR2. Enrichment in CTCF signal (within 500kb up/down flanking), compactness of TADs (the distribution of IFs within TADs). Boundaries in single-cell Hi-C data  are heterogeneous irrespectively of cell type, but tend to overlap with boundaries in bulk Hi-C data. <details>
+    <summary>Paper</summary>
+    Liu, Erhu, Hongqiang Lyu, Yuan Liu, Laiyi Fu, Xiaoliang Cheng, and Xiaoran Yin. “Identifying TAD-like Domains on Single-Cell Hi-C Data by Graph Embedding and Changepoint Detection,” https://doi.org/10.1093/bioinformatics/btae138
+</details>
+
 
 ## Papers
 
