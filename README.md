@@ -41,7 +41,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - [nuc_processing](https://github.com/TheLaueLab/nuc_processing) - Chromatin contact paired-read single-cell Hi-C processing module for Nuc3D and NucTools. See [https://doi.org/10.1038/nature21429](https://doi.org/10.1038/nature21429)
 
-## Normalization
+### Normalization
 
 - [scHiCNorm](http://dna.cs.miami.edu/scHiCNorm/) - scHi-C normalization using regression against known biases (cutting site density, mappability, CG) using six distributions. Filter out cells with less than 50,000 uniquely mapped reads, merge cells, 1Mb resolution. Ramani 2017 data, 74 matrices. Correlations are assumed to be driven by biases, and decrease in between-dataset correlation and increase in variability is judged as good. 
     - Liu, Tong, and Zheng Wang. “[ScHiCNorm: A Software Package to Eliminate Systematic Biases in Single-Cell Hi-C Data](https://doi.org/10.1093/bioinformatics/btx747).” Bioinformatics, (March 15, 2018)
@@ -73,6 +73,13 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 - [DeDoc2](https://github.com/zengguangjie/deDoc2) - scHi-C hierarchical TAD caller. Two variants, deDoc2.w and deDoc2.s, to predict higher and lower level TLDs. Minimize structural entropy of the whole chromosome of sliding window. Benchmarked on downsampled, simulated, and experimental scHi-C data, against Higashi, scHiCluster, deTOKI, SpectralTAD, deDoc, GRiNCH, Insulation Score. Robust to noise, no need for data imputation. <details>
     <summary>Paper</summary>
     Li, Angsheng, Guangjie Zeng, Haoyu Wang, Xiao Li, and Zhihua Zhang. “DeDoc2 Identifies and Characterizes the Hierarchy and Dynamics of Chromatin TAD-Like Domains in the Single Cells.” Advanced Science (Weinheim, Baden-Wurttemberg, Germany) 10, no. 20 (July 2023): e2300366. https://doi.org/10.1002/advs.202300366.
+</details>
+
+### Loop calling
+
+- [scGSLoop](https://github.com/fzbio/scGSLoop) - lightweight deep learning for fast and efficient loop detection at the single-cell level. Directly operates on the sparse scHi-C contact maps, with no need for imputation. Uses training-time proximity-aware negative sampling to improve the model's learning ability on the loop calling task. Applied to Nagano 2017 data and Lee 2019 data under a cross-species setting (trained on species A and tested on species B). Loop calls have potential functional implications. Compared with SnapHiC. <details>
+    <summary>Paper</summary>
+    Wang, Fuzhou, Hamid Alinejad-Rokny, Jiecong Lin, Tingxiao Gao, Xingjian Chen, Zetian Zheng, Lingkuan Meng, Xiangtao Li, and Ka-Chun Wong. “A Lightweight Framework For Chromatin Loop Detection at the Single-Cell Level.” Advanced Science, (October 2023). https://doi.org/10.1002/advs.202303502.
 </details>
 
 ### 3D modeling
