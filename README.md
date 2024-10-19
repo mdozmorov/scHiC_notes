@@ -15,6 +15,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
   - [Clustering](#clustering)
   - [3D modeling](#3d-modeling)
   - [Simulation](#simulation)
+  - [Loop detection](#loop-detection)
   - [TAD detection](#tad-detection)
 - [Papers](#papers)
   - [Clustering, embedding](#clustering-embedding)
@@ -25,13 +26,6 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Tools
-
-- [SnapHiC](https://github.com/HuMingLab/SnapHiC) - scHi-C analysis pipeline. Identifies chromatin loops at 10kb resolution. Imputes contact probability with the random walk with restart algorithm (scHiCluster method, considering the effective fragment size, GC content, mappability, details in Methods), distance-normalizes, applies the paired t-test using global and local background to identify loop candidates, groups the loop candidates using the Rodriguez and Lailo's algorithm, and identifies summits within each cluster. Considers global and local background to filter out false positives. Tested on 742 mouse embryonic stem cells, sn-methyl-3C-seq data from 2,869 human prefrontal cortical cells. Compared with HiCCUPS, discovers 4-70 times more cell-type-specific loops, achieves better F1, peak enrichment in APA analysis, CTCF convergent orientation, also detects known long-range interactions. Linking putative target genes and non-coding sequence variants associated with neuropsychiatric disorders. Ground truth for benchmarking: HiCCUPS loops plus long-range interadtions from PLAC-seq and HiChIP experiments from mESCs (MAPS pipeline). Compared with Hi-C-FastHiC, FitHiC2, HiC-ACT, on downsampled data. <details>
-    <summary>Paper</summary>
-    Yu, Miao, Armen Abnousi, Yanxiao Zhang, Guoqiang Li, Lindsay Lee, Ziyin Chen, Rongxin Fang, et al. “SnapHiC: A Computational Pipeline to Identify Chromatin Loops from Single-Cell Hi-C Data.” Nature Methods, August 26, 2021. https://doi.org/10.1038/s41592-021-01231-2.
-
-    Li, Xiaoqi, Lindsay Lee, Armen Abnousi, Miao Yu, Weifang Liu, Le Huang, Yun Li, and Ming Hu. “SnapHiC2: A Computationally Efficient Loop Caller for Single Cell Hi-C Data.” Computational and Structural Biotechnology Journal 20 (2022): 2778–83. https://doi.org/10.1016/j.csbj.2022.05.046. - SnapHiC2, fast reimplementation using a sliding window approach for random walk with restart. Enables data processing at 5kb resolution.
-</details>
 
 - [scHiCExplorer](https://github.com/joachimwolff/scHiCExplorer) - Single cell Hi-C data analysis toolbox, Python, from processing to normalization, clustering, compartment identification, visualization.
 
@@ -68,7 +62,21 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 - [scHiCluster](https://github.com/zhoujt1994/scHiCluster) - single-cell Hi-C clustering algorithm based on imputation using linear convolution (neighborhood smoothing within a window of size 1 over 1Mb scHi-C matrices) and random walk with restarts. scHi-C challenges: variability, sparsity, coverage heterogeneity. Two-step imputation to resolve sparsity, top-ranked interactions after imputation to resolve heterogeneity. Tested on simulated (from bulk Hi-C controlling for sparsity, and pseudobulk) and experimental (Ramani, four human cell lines; Flyamer, mouse zygotes and oocytes; Nagano) scHi-C data. Against PCA, HiCRep+MDS, the eigenvector method, the decay profile method. Adjusted Rand Index to test clustering quality. TAD-like structures can be detected in imputed data (TopDom). At least 5k contacts per cell is sufficient. Python package. Input - sparse matrices, 1Mb resolution, or juicer-pre format for custom resolution.
     - Zhou, Jingtian, Jianzhu Ma, Yusi Chen, Chuankai Cheng, Bokan Bao, Jian Peng, Terrence J. Sejnowski, Jesse R. Dixon, and Joseph R. Ecker. “[Robust Single-Cell Hi-C Clustering by Convolution- and Random-Walk–Based Imputation](https://doi.org/10.1073/pnas.1901423116).” Proceedings of the National Academy of Sciences, (July 9, 2019)
 
-### TAD calling
+### Loop detection
+
+- [scGSLoop](https://github.com/fzbio/scGSLoop) - chromatin loop calling from scHi-C data. Graph representation of scHi-C data, the proximity-aware constrained variational graph autoencoder (PC-VGAE, GraphSAGE). Optional k-nearest neighborhood imputation. Compares with SnapHiC, better running time, memory usage, works especially well when the number of cells is low. Better enrichment in H3K27ac, H3K4me3 signals. PyTorch implementation. <details>
+    <summary>Paper</summary>
+    Wang, Fuzhou, Hamid Alinejad‐Rokny, Jiecong Lin, Tingxiao Gao, Xingjian Chen, Zetian Zheng, Lingkuan Meng, Xiangtao Li, and Ka‐Chun Wong. “A Lightweight Framework For Chromatin Loop Detection at the Single‐Cell Level.” Advanced Science 10, no. 33 (November 2023): 2303502. https://doi.org/10.1002/advs.202303502.
+</details>
+
+- [SnapHiC](https://github.com/HuMingLab/SnapHiC) - scHi-C analysis pipeline. Identifies chromatin loops at 10kb resolution. Imputes contact probability with the random walk with restart algorithm (scHiCluster method, considering the effective fragment size, GC content, mappability, details in Methods), distance-normalizes, applies the paired t-test using global and local background to identify loop candidates, groups the loop candidates using the Rodriguez and Lailo's algorithm, and identifies summits within each cluster. Considers global and local background to filter out false positives. Tested on 742 mouse embryonic stem cells, sn-methyl-3C-seq data from 2,869 human prefrontal cortical cells. Compared with HiCCUPS, discovers 4-70 times more cell-type-specific loops, achieves better F1, peak enrichment in APA analysis, CTCF convergent orientation, also detects known long-range interactions. Linking putative target genes and non-coding sequence variants associated with neuropsychiatric disorders. Ground truth for benchmarking: HiCCUPS loops plus long-range interadtions from PLAC-seq and HiChIP experiments from mESCs (MAPS pipeline). Compared with Hi-C-FastHiC, FitHiC2, HiC-ACT, on downsampled data. <details>
+    <summary>Paper</summary>
+    Yu, Miao, Armen Abnousi, Yanxiao Zhang, Guoqiang Li, Lindsay Lee, Ziyin Chen, Rongxin Fang, et al. “SnapHiC: A Computational Pipeline to Identify Chromatin Loops from Single-Cell Hi-C Data.” Nature Methods, August 26, 2021. https://doi.org/10.1038/s41592-021-01231-2.
+
+    Li, Xiaoqi, Lindsay Lee, Armen Abnousi, Miao Yu, Weifang Liu, Le Huang, Yun Li, and Ming Hu. “SnapHiC2: A Computationally Efficient Loop Caller for Single Cell Hi-C Data.” Computational and Structural Biotechnology Journal 20 (2022): 2778–83. https://doi.org/10.1016/j.csbj.2022.05.046. - SnapHiC2, fast reimplementation using a sliding window approach for random walk with restart. Enables data processing at 5kb resolution.
+</details>
+
+### TAD detection
 
 - [DeDoc2](https://github.com/zengguangjie/deDoc2) - scHi-C hierarchical TAD caller. Two variants, deDoc2.w and deDoc2.s, to predict higher and lower level TLDs. Minimize structural entropy of the whole chromosome of sliding window. Benchmarked on downsampled, simulated, and experimental scHi-C data, against Higashi, scHiCluster, deTOKI, SpectralTAD, deDoc, GRiNCH, Insulation Score. Robust to noise, no need for data imputation. <details>
     <summary>Paper</summary>
