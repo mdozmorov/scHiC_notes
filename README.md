@@ -169,6 +169,11 @@ Zhou, Tianming, Ruochi Zhang, and Jian Ma. “[The 3D Genome Structure of Single
 
 #### scHi-C multi-omics
 
+- [scHiCAR](https://github.com/DiaoLab/scHiCAR) - single-cell Hi-C, ATAC-seq, mRNA profiling. Plate-based, combinatorial barcoding, five steps, split-pool to attach four barcodes (2.69% collision rate). Cell types identified from ATAC-seq portion. Chromatin interactions come from open chromatin only. 5kb data. Comparable to bulk HiCAR, in situ Hi-C. [scDeepLUCIA](http://junglab.kaist.ac.kr/Dataset/scDeepLUCIA/) loop caller. Applied to 1.62 mouse brain cells (two replicates), reanalyzed previous Gm12878 abd H1hES cells.  Raw data [GSE305889](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305889), processed data [Zenodo](https://zenodo.org/records/18196031). <details>
+    <summary>Paper</summary>
+    Wei, Xiaolin, Yueyuan Xu, Dongchan Yang, et al. “Trimodal Single-Cell Profiling of Transcriptome, Epigenome and 3D Genome in Complex Tissues with scHiCAR.” Nature Biotechnology, ahead of print, February 19, 2026. https://doi.org/10.1038/s41587-026-03013-7.
+</details>
+
 - HiRES technology, Hi-C and RNA-seq employed simultaneously. Single-cell Hi-C and RNA-seq profiling from the same cells. Single-cell 3D structures depend on cell cycle but also diverge in cell type-specific manner. Interactions between B compartments increase during development. 3D changes occur before transcriptional changes. Brain cells and developing mouse embryos, between day 7 (E7.0) and E11.5. 20kb resolution, agrees with Dip-C. SimpleDiff pipeline for differential chromatin interaction analysis (Wilcoxon on distance-specific Z-score-transformed contacts between groups of cells), excitatory vs. inhibitory adult mouse brain neuron analysis. [GSE223917](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223917) - processed data, [description](GSE223917/README.md). Processing [Scripts](https://zenodo.org/records/7691903), Python, R, command line. <details>
     <summary>Paper</summary>
     Liu, Zhiyuan, Yujie Chen, Qimin Xia, Menghan Liu, Heming Xu, Yi Chi, Yujing Deng, and Dong Xing. “Linking Genome Structures to Functions by Simultaneous Single-Cell Hi-C and RNA-Seq.” Science 380, no. 6649 (June 9, 2023): 1070–76. https://doi.org/10.1126/science.adg3797.
