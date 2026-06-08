@@ -134,6 +134,11 @@ Zhou, Tianming, Ruochi Zhang, and Jian Ma. “[The 3D Genome Structure of Single
 
 ### Technologies, data
 
+- Paternal and maternal scHi-C, embryonic mouse cells. Comparison of TADs, loops, compartments, association with epigenomic marks. Two waves of genome assembly. [GSE129029](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129029) - 1015 mouse cell matrices. <details>
+    <summary>Paper</summary>
+    Collombet, Samuel, Noémie Ranisavljevic, Takashi Nagano, et al. “Parental-to-Embryo Switch of Chromosome Organization in Early Embryogenesis.” Nature 580, no. 7801 (2020): 142–46. https://doi.org/10.1038/s41586-020-2125-z.
+</details>
+
 - Single-cell 3D diploid chromatin conformation capture of human and mouse cerebellar cells (granule and Purkinje) across lifespan, coupled with simultaneous profiling of transcriptome and chromatin accessibility (integration with LIGER). Two 3D technologies: population-scale Dip-C (Pop-C) leverages the whole-genome sequencing capability of Dip-C; vDip-C, enables genomic profiling of rare cell populations (Purkinje) using a single viral vector containing a cell type–specific promoter, an ultrabright, fixation-resistant, monomeric fluorescent protein, and a nuclear membrane localization sequence. Granule cells show large structural transformation over the lifespan. scA/B generally correlates with cell type-specific gene expression. Raw and processed data at [PRJNA933352](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA933352) and [GSE246785](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246785) (ArchR objects, contacts in text/pairs format). <details>
     <summary>Paper</summary>
     Tan, Longzhi, Jenny Shi, Siavash Moghadami, Bibudha Parasar, Cydney P. Wright, Yunji Seo, Kristen Vallejo, et al. “Lifelong Restructuring of 3D Genome Architecture in Cerebellar Granule Cells.” Science 381, no. 6662 (September 8, 2023): 1112–19. https://doi.org/10.1126/science.adh3253.
