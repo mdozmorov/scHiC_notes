@@ -15,6 +15,7 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
   - [Clustering](#clustering)
   - [3D modeling](#3d-modeling)
   - [Simulation](#simulation)
+  - [Compartment detection](#compartment-detection)
   - [Loop detection](#loop-detection)
   - [TAD detection](#tad-detection)
 - [Papers](#papers)
@@ -61,6 +62,14 @@ Single-cell 3D genomics notes. Please, [contribute and get in touch](CONTRIBUTIN
 
 - [scHiCluster](https://github.com/zhoujt1994/scHiCluster) - single-cell Hi-C clustering algorithm based on imputation using linear convolution (neighborhood smoothing within a window of size 1 over 1Mb scHi-C matrices) and random walk with restarts. scHi-C challenges: variability, sparsity, coverage heterogeneity. Two-step imputation to resolve sparsity, top-ranked interactions after imputation to resolve heterogeneity. Tested on simulated (from bulk Hi-C controlling for sparsity, and pseudobulk) and experimental (Ramani, four human cell lines; Flyamer, mouse zygotes and oocytes; Nagano) scHi-C data. Against PCA, HiCRep+MDS, the eigenvector method, the decay profile method. Adjusted Rand Index to test clustering quality. TAD-like structures can be detected in imputed data (TopDom). At least 5k contacts per cell is sufficient. Python package. Input - sparse matrices, 1Mb resolution, or juicer-pre format for custom resolution.
     - Zhou, Jingtian, Jianzhu Ma, Yusi Chen, Chuankai Cheng, Bokan Bao, Jian Peng, Terrence J. Sejnowski, Jesse R. Dixon, and Joseph R. Ecker. “[Robust Single-Cell Hi-C Clustering by Convolution- and Random-Walk–Based Imputation](https://doi.org/10.1073/pnas.1901423116).” Proceedings of the National Academy of Sciences, (July 9, 2019)
+
+### Compartment detection
+
+- [scGHOST](https://github.com/ma-compbio/scGHOST) - single-cell 3D genome subcompartments. Imputed scHi-C contact maps, Higashi embeddings for cell similarity measures, random walks create sparse graphs that fed into a graph embedding model generating embeddings for each genomic loci. These embeddings are aligned across chromosomes and clustered to annotate subcompartments. Four components: 1) a sampling procedure motivated by node2vec, 2) a graph node embedding procedure, 3) a clustering process, 4) an alignment procedure. scA1, scA2, scB1, scB2, scB3 annotations, associated with different epigenomic signatures in GM12878 scHi-C and pseudobulk data, tested in IMR90 MERFISH data. scGHOST annotations resolve cell types similar to Higashi but more interpretable. <details>
+    <summary>Paper</summary>
+    Xiong, Kyle, Ruochi Zhang, and Jian Ma. “scGHOST: Identifying Single-Cell 3D Genome Subcompartments.” Nature Methods 21, no. 5 (2024): 814–22. https://doi.org/10.1038/s41592-024-02230-9.
+</details>
+
 
 ### Loop detection
 
